@@ -916,9 +916,10 @@ namespace KerbalEngineer.VesselSimulator {
         private static bool IsEnginePlate(Part thePart) {
             ModuleDecouple mdec = thePart.GetModule<ModuleDecouple>();
             if (mdec != null && mdec.IsStageable()) {
-                ModuleDynamicNodes mdyn = thePart.GetModule<ModuleDynamicNodes>();
-                if (mdyn != null)
-                    return true;
+                // For 1.3.1  :(
+//                 ModuleDynamicNodes mdyn = thePart.GetModule<ModuleDynamicNodes>();
+//                 if (mdyn != null)
+//                     return true;
             }
 
             return false;
